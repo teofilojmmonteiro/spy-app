@@ -7,10 +7,9 @@
 //
 
 #import "TPViewController.h"
+#import "CodeString.h"
 
-@interface TPViewController ()
 
-@end
 
 @implementation TPViewController
 
@@ -24,6 +23,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)encrytText:(id)sender {
+    CodeString *coderString = [[CodeString alloc]initWithKey:@"100"];
+    _messageEncrypt.text = [coderString encryptString:_messageToEncrypt.text];
 }
 
 @end

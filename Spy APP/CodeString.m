@@ -21,12 +21,12 @@
 
 -(NSString*)encryptString:(NSString*)text2code{
     //TODO Encrypt String base on key
-    return 0;
+    return text2code;
 }
 
 -(NSString*)decryptData:(NSString*)text2decode{
     //TODO Decrypt String base on key
-    return 0;
+    return text2decode;
 }
 
 @end

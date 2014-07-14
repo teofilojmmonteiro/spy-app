@@ -10,4 +10,9 @@
 
 @interface TPViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *messageToEncrypt;
+@property (weak, nonatomic) IBOutlet UITextView *messageEncrypt;
+- (IBAction)encrytText:(id)sender;
+
+
 @end
