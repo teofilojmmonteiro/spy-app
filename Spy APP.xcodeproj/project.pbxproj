@@ -22,6 +22,7 @@
 		9C0DAE6B1964BAA300C1CED9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0DAE4A1964BAA200C1CED9 /* UIKit.framework */; };
 		9C0DAE731964BAA300C1CED9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DAE711964BAA300C1CED9 /* InfoPlist.strings */; };
 		9C0DAE751964BAA300C1CED9 /* Spy_APPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DAE741964BAA300C1CED9 /* Spy_APPTests.m */; };
+		9C14982A197C29B700AAFF47 /* TPSpyHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C149829197C29B700AAFF47 /* TPSpyHistoryTableViewController.m */; };
 		9C8EDB0B1964BDAF006BEBAF /* CodeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB0A1964BDAF006BEBAF /* CodeString.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		9C0DAE701964BAA300C1CED9 /* Spy APPTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spy APPTests-Info.plist"; sourceTree = "<group>"; };
 		9C0DAE721964BAA300C1CED9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C0DAE741964BAA300C1CED9 /* Spy_APPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spy_APPTests.m; sourceTree = "<group>"; };
+		9C149828197C29B700AAFF47 /* TPSpyHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSpyHistoryTableViewController.h; sourceTree = "<group>"; };
+		9C149829197C29B700AAFF47 /* TPSpyHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSpyHistoryTableViewController.m; sourceTree = "<group>"; };
 		9C8EDB091964BDAF006BEBAF /* CodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeString.h; sourceTree = "<group>"; };
 		9C8EDB0A1964BDAF006BEBAF /* CodeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +130,8 @@
 				9C0DAE5F1964BAA200C1CED9 /* TPViewController.m */,
 				9C0DAE611964BAA200C1CED9 /* Images.xcassets */,
 				9C0DAE4D1964BAA200C1CED9 /* Supporting Files */,
+				9C149828197C29B700AAFF47 /* TPSpyHistoryTableViewController.h */,
+				9C149829197C29B700AAFF47 /* TPSpyHistoryTableViewController.m */,
 			);
 			path = "Spy APP";
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C14982A197C29B700AAFF47 /* TPSpyHistoryTableViewController.m in Sources */,
 				9C0DAE601964BAA200C1CED9 /* TPViewController.m in Sources */,
 				9C8EDB0B1964BDAF006BEBAF /* CodeString.m in Sources */,
 				9C0DAE571964BAA200C1CED9 /* TPAppDelegate.m in Sources */,
