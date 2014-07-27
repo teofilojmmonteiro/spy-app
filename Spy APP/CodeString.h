@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CodeString : NSObject
-@property (nonatomic) NSString *key;
+@interface CodeString : NSObject<NSCoding>
 
+@property (nonatomic) NSString *keyUsed;
+@property (nonatomic) NSString *originalMessage;
+@property (nonatomic) NSString *codedMessage;
 
--(id)initWithKey:(NSString*)keyCode;
--(NSString*)encryptString:(NSString*)text2code;
--(NSString*)decryptData:(NSString*)text2decode;
 @end

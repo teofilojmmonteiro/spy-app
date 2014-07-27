@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TPViewController.h"
 
-@interface TPSpyHistoryTableViewController : UITableViewController
+@interface TPSpyHistoryTableViewController : UITableViewController<TPViewControllerDelegate>
+
+@property (nonatomic) NSMutableArray* codedMsgs;
 
 @end

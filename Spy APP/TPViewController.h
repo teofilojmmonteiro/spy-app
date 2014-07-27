@@ -7,6 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CodeString.h"
+
+@protocol TPViewControllerDelegate
+
+-(void) addCodedMsg:(CodeString*) message;
+
+
+@end
 
 @interface TPViewController : UIViewController
 
@@ -14,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *messageEncrypt;
 - (IBAction)encrytText:(id)sender;
 
+@property (nonatomic) id delegate;
 
 @end

@@ -32,6 +32,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadArrayFromUD];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +45,64 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 1;
+    return [_codedMsgs count];
 }
 
-/*
+-(void) addCodedMsg:(CodeString *)message{
+    [_codedMsgs addObject:message];
+    [self saveArrayToUD];
+}
+
+-(void) loadArrayFromUD{
+    
+    _codedMsgs = [[NSMutableArray alloc] init];
+    
+    NSData* codedMsgsData = [[NSUserDefaults standardUserDefaults] objectForKey:@"TPCodedMsgs"];
+    
+    if(codedMsgsData){
+        _codedMsgs = [NSKeyedUnarchiver unarchiveObjectWithData:codedMsgsData];
+    }
+    
+    if (!_codedMsgs)
+        _codedMsgs = [[NSMutableArray alloc] init];
+}
+
+
+-(void) saveArrayToUD {
+    
+    NSData *codedMsgsData = [NSKeyedArchiver archivedDataWithRootObject:_codedMsgs];
+    [[NSUserDefaults standardUserDefaults] setObject:codedMsgsData forKey:@"TPCodedMsgs"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self.tableView reloadData];
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSString* identifier = @"codeCell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    
+    
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    CodeString *message = _codedMsgs[indexPath.row];
+    
+    cell.textLabel.text = message.originalMessage;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,15 +142,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    TPViewController *details = segue.destinationViewController;
+    
+    details.delegate = self;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

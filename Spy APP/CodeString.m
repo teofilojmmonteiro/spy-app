@@ -9,24 +9,28 @@
 #import "CodeString.h"
 #import <CommonCrypto/CommonCryptor.h>
 
+static NSString* keyInUse = @"TPKeyInUse";
+static NSString* originalMsgKey = @"TPOriginalMsg";
+static NSString* codedMsgKey = @"TPCodedMsg";
+
 @implementation CodeString
 
--(id)initWithKey:(NSString*)keyCode{
+-(id) initWithCoder:(NSCoder *)aDecoder{
     self = [super init];
-    if (self) {
-        _key   = keyCode;
-    }
+    
+    self.keyUsed = [aDecoder decodeObjectForKey:keyInUse];
+    self.originalMessage = [aDecoder decodeObjectForKey:originalMsgKey];
+    self.codedMessage = [aDecoder decodeObjectForKey:codedMsgKey];
+    
     return self;
 }
 
--(NSString*)encryptString:(NSString*)text2code{
-    //TODO Encrypt String base on key
-    return text2code;
-}
-
--(NSString*)decryptData:(NSString*)text2decode{
-    //TODO Decrypt String base on key
-    return text2decode;
+-(void) encodeWithCoder:(NSCoder *)aCoder{
+    
+    [aCoder encodeObject:self.keyUsed forKey:keyInUse];
+    [aCoder encodeObject:self.originalMessage forKey:originalMsgKey];
+    [aCoder encodeObject:self.codedMessage forKey:codedMsgKey];
+    
 }
 
 @end

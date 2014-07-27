@@ -26,8 +26,17 @@
 }
 
 - (IBAction)encrytText:(id)sender {
-    CodeString *coderString = [[CodeString alloc]initWithKey:@"100"];
-    _messageEncrypt.text = [coderString encryptString:_messageToEncrypt.text];
+    
+    CodeString *coderString = [[CodeString alloc] init];
+    
+    coderString.keyUsed = @"";
+    coderString.originalMessage = self.messageToEncrypt.text;
+    //TODO
+    coderString.codedMessage = coderString.originalMessage;
+    self.messageEncrypt.text = coderString.codedMessage;
+
+    if ([[self delegate] respondsToSelector:@selector(addCodedMsg:)])
+        [[self delegate] addCodedMsg:coderString];
 }
 
 @end
