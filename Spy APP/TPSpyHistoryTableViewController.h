@@ -12,5 +12,7 @@
 @interface TPSpyHistoryTableViewController : UITableViewController<TPViewControllerDelegate>
 
 @property (nonatomic) NSMutableArray* codedMsgs;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *edit;
+- (IBAction)editAction:(id)sender;
 
 @end

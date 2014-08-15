@@ -113,18 +113,21 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [_codedMsgs removeObjectAtIndex:indexPath.row];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        
+    }
+    [tableView reloadData];
+    [self saveArrayToUD];
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -150,10 +153,30 @@
 {
     TPViewController *details = segue.destinationViewController;
     
+    if([segue.identifier isEqualToString:@"viewDetails"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CodeString *codeMessage = [_codedMsgs objectAtIndex:indexPath.row];
+        details.coderString = codeMessage;
+    }
+    
+    if(details.coderString){
+        NSLog(@"OPA");
+    }
     details.delegate = self;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 
 
+- (IBAction)editAction:(id)sender {
+    
+    if(![self.tableView isEditing]){
+        _edit.title = @"Stop";
+        [self.tableView setEditing:YES animated:YES];
+    }
+    else{
+        _edit.title = @"Edit";
+        [self.tableView setEditing:NO animated:YES];
+    }
+}
 @end

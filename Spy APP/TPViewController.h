@@ -17,9 +17,10 @@
 @end
 
 @interface TPViewController : UIViewController
-
+@property (nonatomic)  CodeString *coderString;
 @property (weak, nonatomic) IBOutlet UITextField *messageToEncrypt;
 @property (weak, nonatomic) IBOutlet UITextView *messageEncrypt;
+@property (weak, nonatomic) IBOutlet UIButton *encryptButton;
 - (IBAction)encrytText:(id)sender;
 
 @property (nonatomic) id delegate;

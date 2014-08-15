@@ -8,7 +8,7 @@
 
 #import "TPViewController.h"
 #import "CodeString.h"
-
+#import "AESCrypt.h"
 
 
 @implementation TPViewController
@@ -17,6 +17,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    if(_coderString){
+        self.messageToEncrypt.text=_coderString.originalMessage;
+        self.messageEncrypt.text = _coderString.codedMessage;
+        [self.encryptButton setEnabled:NO];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,17 +34,19 @@
 }
 
 - (IBAction)encrytText:(id)sender {
+    if(!_coderString)
+        _coderString = [[CodeString alloc] init];
     
-    CodeString *coderString = [[CodeString alloc] init];
-    
-    coderString.keyUsed = @"";
-    coderString.originalMessage = self.messageToEncrypt.text;
-    //TODO
-    coderString.codedMessage = coderString.originalMessage;
-    self.messageEncrypt.text = coderString.codedMessage;
+    _coderString.keyUsed = @"777";
+    _coderString.originalMessage = self.messageToEncrypt.text;
+
+    _coderString.codedMessage = [AESCrypt encrypt:_coderString.originalMessage password:_coderString.keyUsed];
+    self.messageEncrypt.text = _coderString.codedMessage;
 
     if ([[self delegate] respondsToSelector:@selector(addCodedMsg:)])
-        [[self delegate] addCodedMsg:coderString];
+        [[self delegate] addCodedMsg:_coderString];
+    
+    [self.encryptButton setEnabled:NO];
 }
 
 @end

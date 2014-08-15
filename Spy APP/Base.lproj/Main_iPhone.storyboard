@@ -44,6 +44,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HJJ-jp-6qt"/>
                     <connections>
+                        <outlet property="encryptButton" destination="457-xx-ESX" id="WIj-Nd-jGU"/>
                         <outlet property="messageEncrypt" destination="WU2-Dt-Wxt" id="hrG-g8-mw0"/>
                         <outlet property="messageToEncrypt" destination="fZo-in-KPM" id="IZn-gm-3ry"/>
                     </connections>
@@ -61,15 +62,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="codeCell" textLabel="Cok-7S-FOs" style="IBUITableViewCellStyleDefault" id="Jnm-k8-thb">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="codeCell" textLabel="Cok-7S-FOs" style="IBUITableViewCellStyleDefault" id="Jnm-k8-thb">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jnm-k8-thb" id="cLv-oB-Rmm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cok-7S-FOs">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -77,6 +78,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="viewDetails" id="Bee-S7-t7D"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -86,12 +90,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Coded Messages" id="al7-Hj-Yte">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="44Q-Aj-AKg">
+                            <connections>
+                                <action selector="editAction:" destination="Usp-Bc-OkO" id="RLR-fT-t8r"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New" id="4fO-pd-OV8">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="push" id="vNn-e8-TLc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="edit" destination="44Q-Aj-AKg" id="0u0-YF-cJ4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gA-dn-rXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,4 +130,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bee-S7-t7D"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -23,6 +23,13 @@
 		9C0DAE731964BAA300C1CED9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DAE711964BAA300C1CED9 /* InfoPlist.strings */; };
 		9C0DAE751964BAA300C1CED9 /* Spy_APPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DAE741964BAA300C1CED9 /* Spy_APPTests.m */; };
 		9C14982A197C29B700AAFF47 /* TPSpyHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C149829197C29B700AAFF47 /* TPSpyHistoryTableViewController.m */; };
+		9C41F02E199D8B0D003BB7FE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9C41F023199D8B0D003BB7FE /* .gitignore */; };
+		9C41F02F199D8B0D003BB7FE /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C41F025199D8B0D003BB7FE /* AESCrypt.m */; };
+		9C41F030199D8B0D003BB7FE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9C41F026199D8B0D003BB7FE /* LICENSE */; };
+		9C41F031199D8B0D003BB7FE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C41F028199D8B0D003BB7FE /* NSData+Base64.m */; };
+		9C41F032199D8B0D003BB7FE /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C41F02A199D8B0D003BB7FE /* NSData+CommonCrypto.m */; };
+		9C41F033199D8B0D003BB7FE /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C41F02C199D8B0D003BB7FE /* NSString+Base64.m */; };
+		9C41F034199D8B0D003BB7FE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9C41F02D199D8B0D003BB7FE /* README.md */; };
 		9C8EDB0B1964BDAF006BEBAF /* CodeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8EDB0A1964BDAF006BEBAF /* CodeString.m */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +66,17 @@
 		9C0DAE741964BAA300C1CED9 /* Spy_APPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spy_APPTests.m; sourceTree = "<group>"; };
 		9C149828197C29B700AAFF47 /* TPSpyHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSpyHistoryTableViewController.h; sourceTree = "<group>"; };
 		9C149829197C29B700AAFF47 /* TPSpyHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSpyHistoryTableViewController.m; sourceTree = "<group>"; };
+		9C41F023199D8B0D003BB7FE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9C41F024199D8B0D003BB7FE /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		9C41F025199D8B0D003BB7FE /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		9C41F026199D8B0D003BB7FE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9C41F027199D8B0D003BB7FE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		9C41F028199D8B0D003BB7FE /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		9C41F029199D8B0D003BB7FE /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		9C41F02A199D8B0D003BB7FE /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		9C41F02B199D8B0D003BB7FE /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		9C41F02C199D8B0D003BB7FE /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		9C41F02D199D8B0D003BB7FE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9C8EDB091964BDAF006BEBAF /* CodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeString.h; sourceTree = "<group>"; };
 		9C8EDB0A1964BDAF006BEBAF /* CodeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +138,7 @@
 		9C0DAE4C1964BAA200C1CED9 /* Spy APP */ = {
 			isa = PBXGroup;
 			children = (
+				9C41F022199D8B0D003BB7FE /* AESCrypt-ObjC-master */,
 				9C0DAE551964BAA200C1CED9 /* TPAppDelegate.h */,
 				9C0DAE561964BAA200C1CED9 /* TPAppDelegate.m */,
 				9C8EDB091964BDAF006BEBAF /* CodeString.h */,
@@ -163,6 +182,24 @@
 				9C0DAE711964BAA300C1CED9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C41F022199D8B0D003BB7FE /* AESCrypt-ObjC-master */ = {
+			isa = PBXGroup;
+			children = (
+				9C41F023199D8B0D003BB7FE /* .gitignore */,
+				9C41F024199D8B0D003BB7FE /* AESCrypt.h */,
+				9C41F025199D8B0D003BB7FE /* AESCrypt.m */,
+				9C41F026199D8B0D003BB7FE /* LICENSE */,
+				9C41F027199D8B0D003BB7FE /* NSData+Base64.h */,
+				9C41F028199D8B0D003BB7FE /* NSData+Base64.m */,
+				9C41F029199D8B0D003BB7FE /* NSData+CommonCrypto.h */,
+				9C41F02A199D8B0D003BB7FE /* NSData+CommonCrypto.m */,
+				9C41F02B199D8B0D003BB7FE /* NSString+Base64.h */,
+				9C41F02C199D8B0D003BB7FE /* NSString+Base64.m */,
+				9C41F02D199D8B0D003BB7FE /* README.md */,
+			);
+			path = "AESCrypt-ObjC-master";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +279,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C41F030199D8B0D003BB7FE /* LICENSE in Resources */,
+				9C41F02E199D8B0D003BB7FE /* .gitignore in Resources */,
 				9C0DAE5D1964BAA200C1CED9 /* Main_iPad.storyboard in Resources */,
+				9C41F034199D8B0D003BB7FE /* README.md in Resources */,
 				9C0DAE621964BAA200C1CED9 /* Images.xcassets in Resources */,
 				9C0DAE5A1964BAA200C1CED9 /* Main_iPhone.storyboard in Resources */,
 				9C0DAE511964BAA200C1CED9 /* InfoPlist.strings in Resources */,
@@ -264,10 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C41F033199D8B0D003BB7FE /* NSString+Base64.m in Sources */,
+				9C41F032199D8B0D003BB7FE /* NSData+CommonCrypto.m in Sources */,
 				9C14982A197C29B700AAFF47 /* TPSpyHistoryTableViewController.m in Sources */,
 				9C0DAE601964BAA200C1CED9 /* TPViewController.m in Sources */,
 				9C8EDB0B1964BDAF006BEBAF /* CodeString.m in Sources */,
+				9C41F031199D8B0D003BB7FE /* NSData+Base64.m in Sources */,
 				9C0DAE571964BAA200C1CED9 /* TPAppDelegate.m in Sources */,
+				9C41F02F199D8B0D003BB7FE /* AESCrypt.m in Sources */,
 				9C0DAE531964BAA200C1CED9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
